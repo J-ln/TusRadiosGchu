@@ -1,12 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import "./Player.css";
+@import "./Slider.css";
+@import "./Footer.css";
+@import "./Metal.css";
+@import "./NavBar.css";
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -30,4 +29,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.h-screen-50 {
+  height: 50vh;
+}
+
+.radial-grad-background {
+  background: radial-gradient(
+    100% 115% at 50% 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(255, 255, 255, 1)
+  );
+}
+
+.text-5xl-main {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.shadow-b-white {
+  box-shadow: -2px 2px 10px rgba(255, 255, 255, 0.2),
+    2px -2px 10px rgba(255, 255, 255, 0.2);
 }

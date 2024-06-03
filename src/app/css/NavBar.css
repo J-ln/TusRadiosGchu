@@ -1,0 +1,13 @@
+.contact-btn-bg {
+  color: hsl(46, 95%, 45%);
+
+  background-color: hsl(46, 95%, 45%);
+  box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
+    /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
+    /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
+    /* bottom SD */ inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
+    /* top HL */ hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
+    /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
+
+  transition: color 0.2s;
+}
