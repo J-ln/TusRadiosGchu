@@ -6,7 +6,6 @@ import useRadioData from "@/lib/fetchRadioData";
 import Image from "next/image";
 import PrevIcon from "../../icons/i-prev.png";
 import NextIcon from "../../icons/i-next.png";
-import next from "next";
 
 const Slider = () => {
   const [frontCardIndex, setFrontCardIndex] = useState(0);
@@ -35,8 +34,8 @@ const Slider = () => {
   };
 
   return (
-    <div className="basis-full w-full h-[70vh]  relative flex flex-row items-center  mt-20 transition-transform ease-in-out duration-500 rounded-2xl  ">
-      <div className="relative float-start basis-1/2 w-full h-full   ">
+    <div className="basis-full w-full h-[150vh] md:h-[85vh]  relative flex flex-col lg:flex-row items-center mb-16 md:mb-0  mt-[40vh] md:mt-[0vh] lg:mt-10 transition-transform ease-in-out duration-500 rounded-2xl   ">
+      <div className="relative float-start basis-full lg:basis-1/2 w-full h-full   ">
         {radios.map((radio, i) => (
           <Card
             key={radio.id}
@@ -46,24 +45,24 @@ const Slider = () => {
           />
         ))}
       </div>
-      <div className="relative  flex flex-col justify-around w-1/2 h-full  p-4  rounded-2xl  metal  ">
+      <div className="relative  flex flex-col justify-around w-full lg:w-1/2 h-[50vh] lg:h-[70vh] xl:h-[60vh]   p-4  rounded-2xl  metal linear-2 border-white border-2  ">
         <div className=" flex flex-col items-center justify-center ">
-          <div className="w-3/4 h-24  flex items-center justify-center bg-black  boder-2 ridge-border-slider">
+          <div className="w-[95%]  h-24  flex items-center justify-center bg-black  boder-2 ridge-border-slider">
             <h3
-              className=" text-6xl font-bold  "
+              className=" text-4xl md:text-5xl xl:text-6xl font-bold transition-all duration-400  "
               style={{ color: radios[frontCardIndex].color }}
             >
               {radios[frontCardIndex].name}
             </h3>
           </div>
-          <div className="w-3/4 h-48 bg-[#000000] bg-opacity-90  p-2 border-black border-4 ">
-            <p className="text-xl text-white font-thin">
+          <div className="w-[95%]  h-48 bg-[#000000] bg-opacity-90  p-2 border-black border-4 ">
+            <p className="text-base md:text-lg xl:text-xl text-white font-thin">
               {radios[frontCardIndex].description}
             </p>
           </div>
         </div>
 
-        <div className="flex flex-row items-center justify-center gap-8  ">
+        <div className="flex flex-row items-center justify-between w-full gap-16 sm:gap-28 lg:gap-28 px-2 md:px-3 lg:px-4 sm:mt-3 lg:mt-0  ">
           <button
             onClick={handlePrev}
             className="rounded-2xl h-20 w-40 metal radial flex items-center justify-center border-[1px] border-black"

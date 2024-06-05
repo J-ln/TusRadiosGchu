@@ -26,9 +26,7 @@
 } */
 
 .ig-btn-bg {
-  color: hsl(340, 75%, 54%);
-
-  background-color: hsl(340, 75%, 54%);
+  background-color: hsla(340, 75%, 54%, 0.5);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
     /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
     /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
@@ -37,12 +35,17 @@
     /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
 
   transition: color 0.2s;
+}
+
+.ig-btn-bg:hover {
+  background-color: hsl(340, 75%, 54%);
+  scale: 1.1;
 }
 
 .face-btn-bg {
   color: hsl(221, 44%, 41%);
 
-  background-color: hsl(221, 44%, 41%);
+  background-color: hsla(221, 44%, 41%, 0.5);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
     /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
     /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
@@ -51,12 +54,17 @@
     /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
 
   transition: color 0.2s;
+}
+
+.face-btn-bg:hover {
+  background-color: hsl(221, 60%, 41%);
+  scale: 1.1;
 }
 
 .whatsapp-btn-bg {
   color: hsl(120, 100%, 37%);
 
-  background-color: hsl(120, 100%, 37%);
+  background-color: hsla(120, 100%, 37%, 0.5);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
     /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
     /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
@@ -67,42 +75,7 @@
   transition: color 0.2s;
 }
 
-/* .face-btn-bg {
-  background: hsl(221, 44%, 41%);
-  background: -moz-linear-gradient(
-    top,
-    rgba(59, 89, 152, 1) 0%,
-    rgba(41, 137, 216, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(59, 89, 152, 1) 0%,
-    rgba(41, 137, 216, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(59, 89, 152, 1) 0%,
-    rgba(41, 137, 216, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b5998",endColorstr="#2989d8",GradientType=0);
+.whatsapp-btn-bg:hover {
+  background-color: hsl(120, 100%, 37%);
+  scale: 1.1;
 }
-
-.whatsapp-btn-bg {
-  background: hsl(120, 100%, 37%);
-  background: -moz-linear-gradient(
-    top,
-    rgba(0, 187, 0, 1) 0%,
-    rgba(0, 187, 0, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(0, 187, 0, 1) 0%,
-    rgba(0, 187, 0, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 187, 0, 1) 0%,
-    rgba(0, 187, 0, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bb00",endColorstr="#00bb00",GradientType=0);
-} */

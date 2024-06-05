@@ -18,7 +18,7 @@ const useRadioStore = create<State & Actions>((set, get) => ({
     id: 0,
     name: "",
     url: "",
-    color: "#fff",
+    color: "#333",
     image: null as any,
     description: "",
   },

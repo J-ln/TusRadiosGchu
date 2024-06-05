@@ -21,6 +21,14 @@ export interface RadioCarousel {
   color: string;
 }
 
+export interface RadioSelector {
+  id: number;
+  name: string;
+  url: string;
+  color: string;
+  image: StaticImageData;
+}
+
 export type PlayState = boolean;
 
 // Create a custom provider for your app that returns your data.

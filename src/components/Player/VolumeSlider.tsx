@@ -15,7 +15,7 @@ const VolumeSlider = ({ audioRef, setVolume }: VolumeSliderProps) => {
     setVolume(newVolume); // Actualiza el estado del volumen si es necesario
   };
   return (
-    <div className="flex items-center px-1  gap-1justify-center metal linear shadow-black shadow-sm w-50 h-10 rounded-lg ">
+    <div className="hidden sm:flex items-center px-1  gap-1justify-center metal linear shadow-black shadow-sm w-50 h-10 rounded-lg ">
       <Image src={MuteIcon} alt={"mute"} width={20} height={20} />
       <input
         type="range"

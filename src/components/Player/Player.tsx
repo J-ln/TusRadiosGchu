@@ -50,11 +50,11 @@ const Player = () => {
 
   return (
     <div className="fixed z-50 bottom-0 left-0 w-full h-20 metal  backdrop-blur-xl overflow-hidden ">
-      <div className="flex justify-between items-center h-full w-full px-20 ">
+      <div className="flex justify-around sm:justify-between items-center h-full w-full px-5 sm:px-20 ">
         <LiveButton audioRef={audioPLayer} />
         <button
           onClick={() => handlePlay(audioPLayer)}
-          className="flex items-center justify-center text-white metal radial  w-[4.5rem] h-[4.5rem] rounded-full transition-all duration-300  "
+          className="flex items-center  justify-center text-white metal radial  w-[4.5rem] h-[4.5rem] rounded-full transition-all duration-300  "
         >
           {isPlaying ? (
             <Image src={pauseIcon} alt={"pause"} width={40} height={40} />
