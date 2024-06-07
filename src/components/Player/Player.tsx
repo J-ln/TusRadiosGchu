@@ -6,6 +6,7 @@ import playIcon from "../../icons/i-play.png";
 import pauseIcon from "../../icons/i-pause.png";
 import VolumeSlider from "./VolumeSlider";
 import LiveButton from "./LiveButton";
+import clsx from "clsx";
 
 const handleVolume = (source: RefObject<HTMLAudioElement>, volume: number) => {
   if (source.current) {
@@ -14,11 +15,9 @@ const handleVolume = (source: RefObject<HTMLAudioElement>, volume: number) => {
 };
 
 const Player = () => {
-  const [isVisisble, setIsVisible] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   const currentRadio = useRadioStore((state) => state.radio);
   const playState = useRadioStore((state) => state.playState);
-  const { pauseAudio, playAudio } = useRadioStore();
+  const { pauseAudio, playAudio, setPlayState } = useRadioStore();
   const audioPLayer = createRef<HTMLAudioElement>();
   const [volume, setVolume] = useState(100);
 
@@ -28,35 +27,34 @@ const Player = () => {
   }
 
   function handlePlay(source: RefObject<HTMLAudioElement>) {
-    if (isPlaying) {
+    setPlayState(!playState);
+    if (playState === true) {
       pauseAudio(source);
-      audioPLayer.current?.pause();
     } else {
       playAudio(source);
-      audioPLayer.current?.play();
     }
-    setIsPlaying(!isPlaying);
   }
 
   useEffect(() => {
-    if (playState !== isPlaying) {
-      setIsPlaying(playState);
-    }
     if (audioPLayer.current && currentRadio.url !== audioPLayer.current.src) {
       audioPLayer.current.src = currentRadio.url;
-      console.log(currentRadio.url, audioPLayer.current.src);
     }
-  }, [currentRadio, isPlaying, audioPLayer, playState]);
+  }, [currentRadio, audioPLayer, playState, playAudio]);
 
   return (
-    <div className="fixed z-50 bottom-0 left-0 w-full h-20 metal  backdrop-blur-xl overflow-hidden ">
+    <div
+      className={clsx(
+        "fixed z-[1000] bottom-0 left-0 w-full h-20 player-bg  backdrop-blur-xl overflow-hidden",
+        currentRadio.id !== 0 ? "visible" : "hidden"
+      )}
+    >
       <div className="flex justify-around sm:justify-between items-center h-full w-full px-5 sm:px-20 ">
         <LiveButton audioRef={audioPLayer} />
         <button
           onClick={() => handlePlay(audioPLayer)}
           className="flex items-center  justify-center text-white metal radial  w-[4.5rem] h-[4.5rem] rounded-full transition-all duration-300  "
         >
-          {isPlaying ? (
+          {playState ? (
             <Image src={pauseIcon} alt={"pause"} width={40} height={40} />
           ) : (
             <Image src={playIcon} alt={"play"} width={40} height={40} />

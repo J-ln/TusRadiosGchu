@@ -1,9 +1,12 @@
 import React from "react";
 import Slider from "./Carousel/Slider";
+import MainBackground from "./MainBackground";
+import useRadioStore from "@/store";
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row flex-wrap items-center  w-full min-h-max px-5 md:p-20 ">
+    <section className="flex flex-col md:flex-row flex-wrap items-center   w-full min-h-max p-5 md:p-20   z-0 crt-screen ">
+      <MainBackground />
       <div className="flex justify-center  items-center  w-full lg:basis-1/2 h-72 rounded-2xl bg-black header-shadow ">
         <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold  text-right z-20 ">
           ¿Quienes

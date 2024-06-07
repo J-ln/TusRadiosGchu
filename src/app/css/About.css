@@ -4,3 +4,56 @@
     inset -2px 2px 5px rgba(255, 255, 255, 0.2),
     inset 2px -2px 5px rgba(255, 255, 255, 0.2);
 }
+
+.vintage-bg {
+  background-image: linear-gradient(
+      #efe1d6,
+      #fef4e8 7.1%,
+      #f7e9dc 7.25%,
+      #f7ece8 7.35%,
+      #e8dacf 7.4% 9.5%,
+      #e3d6ce 7.6%,
+      #d9cbc6 39%,
+      transparent 39.02%,
+      transparent 55%,
+      #d5c5c0 55.02%,
+      #cdc4bd,
+      #cbc2bd,
+      #cbbeb6 96%,
+      #c5bcb3 96.15%,
+      #797069 99%,
+      #544f4c
+    ),
+    linear-gradient(170deg, #cdc4bd, #c6bdb6);
+}
+
+.desc-bg {
+  background-image: linear-gradient(
+    180deg,
+    #272028,
+    #231d1f,
+    #201921,
+    #231e1b,
+    #231c24
+  );
+}
+
+.desc-btn-bg {
+  background-image: radial-gradient(#77726e 30%, #9a968d 50%, transparent 65%),
+    linear-gradient(
+      #a29899,
+      #c1b7b5,
+      #c5bbb9,
+      #c8bebc 10%,
+      #aaa09e 29%,
+      /* End highlight */ #a19d92 32%,
+      /* start key */ #a19c98,
+      #9d9990 77%,
+      /* end key */ #65605c 95%,
+      /* start shadow */ #393335
+    );
+  box-shadow: 3px 10px 12px -3px rgba(0, 0, 0, 0.45),
+    2px 20px 14px -2px rgba(0, 0, 0, 0.2), 0 0 1px 0.25px #383129,
+    0.5px 0 1px -0.25px #453d3a inset, 0 -1.25px 1.5px -0.75px #22171b inset,
+    0 1px 1.25px -0.75px #aea4a3 inset;
+}

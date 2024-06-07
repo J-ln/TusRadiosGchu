@@ -8,13 +8,17 @@
 @import "./NavBar.css";
 @import "./Main.css";
 @import "./About.css";
-
+@import "./Crt.css";
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+section {
+  margin: 0 !important;
 }
 
 body {

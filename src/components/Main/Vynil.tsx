@@ -35,7 +35,7 @@ const Vynil = ({ color, isPlaying }: VynilProps) => {
     <motion.div
       style={{ rotate: rotation }}
       animate={controls}
-      className="absolute m-auto p-auto z-0 bg-black rounded-full h-[450px] w-[450px] vynil"
+      className="absolute m-auto p-auto z-0 bg-black rounded-full h-[450px] w-[450px] vynil vynil-shadow"
     >
       <motion.div
         style={{ background: color }}

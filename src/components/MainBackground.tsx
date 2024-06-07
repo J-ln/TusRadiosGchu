@@ -1,13 +1,12 @@
+"use client";
 import React, { useEffect } from "react";
 import { useMotionTemplate, useMotionValue, animate } from "framer-motion";
 import useRadioStore from "../store";
 import BlurElement from "./Background/BlurElement";
 import useBackgroundAnimation from "../app/hooks/useBackgroundAnimation";
 
-interface MainBackgroundProps {
-  color: string;
-}
-const MainBackground = ({ color }: MainBackgroundProps) => {
+const MainBackground = () => {
+  const color = useRadioStore((state) => state.radio.color);
   const isPlaying = useRadioStore((state) => state.playState);
   const controls = useBackgroundAnimation(color);
   const backgroundGradient1 = useMotionTemplate`radial-gradient(
@@ -27,7 +26,7 @@ const MainBackground = ({ color }: MainBackgroundProps) => {
 
   useEffect(() => {}, [color, isPlaying]);
   return (
-    <div className="relative flex flex-col justify-between w-full h-screen">
+    <div className="absolute top-0 left-0 -z-10  flex flex-col justify-between w-full h-full">
       <BlurElement
         key={1}
         isPlaying={isPlaying}

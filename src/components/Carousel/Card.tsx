@@ -10,16 +10,16 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ radio, zIndex, index }) => {
-  const y = zIndex === 0 ? 0 : (zIndex / 10) * 15;
-  const x = zIndex === 0 ? 0 : (zIndex / 10) * 10;
+  const y = zIndex === 0 ? 0 : (zIndex / 10) * 20;
+  const x = zIndex === 0 ? 0 : (zIndex / 10) * 25;
 
   return (
     <motion.div
-      className=" absolute  left-8 md:left-16 lg:left-12 xl:left-16 -top-[30vh]  md:top-[5vh] lg:top-[20vh] xl:top-[23vh]  w-11/12 md:w-5/6   h-{60vh} md:h-[40vh] flex items-center justify-center   border rounded-2xl "
+      className=" absolute  right-1  w-11/12    h-[70%]  flex items-center justify-center   border rounded-2xl "
       style={{
         zIndex: zIndex,
         backgroundColor: radio.color,
-        opacity: zIndex === 0 ? 1 : 0.8,
+        mixBlendMode: zIndex === 0 ? "normal" : "luminosity",
       }}
       initial={{
         scale: 0.9,

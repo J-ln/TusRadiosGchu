@@ -16,8 +16,8 @@ const Main = () => {
   const isPlaying = useRadioStore((state) => state.playState);
 
   return (
-    <section className="relative flex  items-center justify-center w-full px-20 h-screen bg-black">
-      <MainBackground color={currentRadioColor} />
+    <section className="relative flex  items-center justify-center w-full px-20 h-screen bg-black crt-screen">
+      <MainBackground />
       <MainHeader bold="Nuestras" thin="Estaciones" />
       <Vynil color={currentRadioColor} isPlaying={isPlaying} />
       <div className="absolute flex flex-col   md:px-0 gap-5  md:gap-0 md:flex-row flex-wrap top-[20%] md:top-0 left-0 h-full w-1/2 md:w-full md:h-full ">
@@ -33,7 +33,6 @@ const Main = () => {
           />
         ))}
       </div>
-      {currentRadio.id !== 0 && <Player />}
     </section>
   );
 };

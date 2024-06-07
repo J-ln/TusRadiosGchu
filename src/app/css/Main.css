@@ -104,3 +104,7 @@
 .vinyl:after {
   transform: rotate(-65deg);
 }
+
+.vinyl-shadow {
+  box-shadow: 1 1 20px 0 hsla(0, 0%, 100%, 1), 1 1 20px 0 hsla(0, 0%, 100%, 1);
+}

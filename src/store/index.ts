@@ -11,6 +11,7 @@ type Actions = {
   setRadio: (radio: Radio) => void;
   pauseAudio: (audioPlayer: RefObject<HTMLAudioElement>) => void;
   playAudio: (audioPlayer: RefObject<HTMLAudioElement>) => void;
+  setPlayState: (newState: boolean) => void;
 };
 
 const useRadioStore = create<State & Actions>((set, get) => ({
@@ -23,17 +24,24 @@ const useRadioStore = create<State & Actions>((set, get) => ({
     description: "",
   },
   playState: false,
+
+  setPlayState: (newState) => set({ playState: newState }),
   setRadio: async (radio: Radio) => {
     if (radio.id !== get().radio.id) {
-      set({ playState: false, radio });
+      set({ playState: false });
+
+      set({ radio: radio });
     }
   },
   getRadio: async () => get().radio,
-  pauseAudio: () => {
+  pauseAudio: async (source) => {
+    source.current?.pause();
     set({ playState: false });
   },
-  playAudio: () => {
-    set({ playState: true });
+  playAudio: async (source) => {
+    await source.current?.play().finally(() => {
+      set({ playState: true });
+    });
   },
 }));
 

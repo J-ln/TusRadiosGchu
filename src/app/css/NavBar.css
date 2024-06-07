@@ -11,3 +11,25 @@
 
   transition: color 0.2s;
 }
+
+.bg-navbar {
+  background-image: linear-gradient(
+      #efe1d6,
+      #fef4e8 7.1%,
+      #f7e9dc 7.25%,
+      #f7ece8 7.35%,
+      #e8dacf 7.4% 9.5%,
+      #e3d6ce 7.6%,
+      #d9cbc6 39%,
+      transparent 39.02%,
+      transparent 55%,
+      #d5c5c0 55.02%,
+      #cdc4bd,
+      #cbc2bd,
+      #cbbeb6 96%,
+      #c5bcb3 96.15%,
+      #797069 99%,
+      #544f4c
+    ),
+    linear-gradient(170deg, #cdc4bd, #c6bdb6);
+}

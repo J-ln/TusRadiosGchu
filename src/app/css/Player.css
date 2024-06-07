@@ -3,7 +3,7 @@
 }
 
 .off-red-gradient-bg {
-  background: rgb(36, 0, 0);
+  background: rgb(59, 0, 0);
   background: -moz-radial-gradient(
     circle,
     rgba(36, 0, 0, 1) 0%,
@@ -49,6 +49,15 @@
     rgba(255, 0, 0, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ff0000",GradientType=1);
+}
+.border-ridge {
+  border-block: 3px solid #474747;
+  /* The left (start) and right (end) borders */
+  border-inline: 3px solid #474747;
+}
+.player-bg {
+  background-color: #7c746e;
+  background-image: linear-gradient(to bottom, #6e6762, #6e6762);
 }
 
 .volume-slider {
