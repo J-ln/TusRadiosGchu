@@ -8,9 +8,9 @@ import ContactInfo from "@/components/Footer/ContactInfo";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center  w-full  h-fit metal  ">
-      <div className="flex flex-col items-center  w-full h-full ">
-        <h3 className="text-4xl font-bold text-white p-6">
+    <footer className="flex flex-col items-center  w-full  h-fit footer-bg  ">
+      <div className="flex flex-col items-center justify-around gap-10  py-6 pb-12  w-full h-full ">
+        <h3 className="text-4xl font-bold text-[#ccc]   text-shadow ">
           Nuestras <span className="font-light">redes</span>
         </h3>
         <div className="flex flex-row items-center justify-center gap-10 h-fit w-1/2   ">
@@ -33,7 +33,7 @@ const Footer = () => {
             color="whatsapp-btn-bg"
           />
         </div>
-        <div className="flex flex-col gap-6 items-center w-full h-fit p-10 sm:p-14">
+        <div className="flex flex-col gap-6 items-center w-full h-fit  sm:p-0">
           <ContactInfo textField="+54-3446-777777" dataField="Telefono:" />
 
           <ContactInfo textField="ejemplo@ejemplo.com" dataField="Email:" />
@@ -44,20 +44,20 @@ const Footer = () => {
           color="rgb(110 231 183)"
           url="#"
           linkText="Julian R."
-          normalText="Diseño y desarrollo por"
+          normalText="Diseño y desarrollo por  "
         />
 
         <TinyText
           color="rgb(103 232 249)"
           url="#"
           linkText="8Icons"
-          normalText="Iconos por"
+          normalText="Iconos por "
         />
         <TinyText
           color="rgb(245 158 11)"
           url="#"
           linkText="TusRadios."
-          normalText="Todos los derechos reservados &copy;"
+          normalText="Todos los derechos reservados &copy; "
         />
       </div>
     </footer>

@@ -1,19 +1,21 @@
 import NavBar from "./../components/NavBar";
 import Main from "@/components/Main/Main";
-import About from "./../components/About";
+import About from "../components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Player from "@/components/Player/Player";
 import useRadioStore from "@/store";
+import MainBackground from "@/components/MainBackground";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col gap-0 w-full min-h-screen max-h-fit  overflow-x-hidden  scroll-smooth ">
+    <main className="relative flex flex-col gap-0 pb-20 w-full min-h-screen max-h-fit crt-screen  overflow-x-hidden  scroll-smooth ">
+      <MainBackground />
       <NavBar />
       <Main />
+
       <About />
       <Footer />
       <Player />
-      <div className="w-full h-20 bg-[#8f8f8f33]"></div>
     </main>
   );
 }

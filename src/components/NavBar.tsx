@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const NavBar = () => {
   return (
-    <nav className=" fixed top-0 w-full h-16 bg z-50 bg-navbar ">
+    <nav className=" fixed top-0 w-full h-16 z-50 bg-navbar ">
       <div className=" w-screen h-full flex flex-row  items-center justify-between  px-5 sm:px-20 p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src={vinyl} alt="TuRadio" width={50} height={50} />

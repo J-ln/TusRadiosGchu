@@ -15,7 +15,7 @@ const BlurElement = ({ isPlaying, gradient, controls }: BlurElementProps) => {
       transition={{ duration: 0.4, type: "tween", ease: "linear" }}
       style={{ background: gradient }}
       className={clsx(
-        "  w-full h-1/2 blur-3xl  transition-all duration-500 ",
+        "  w-full h-1/2 blur-[100px]  transition-all duration-500 ",
         isPlaying && "animate-pulse"
       )}
     ></motion.div>

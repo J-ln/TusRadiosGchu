@@ -24,10 +24,10 @@
     );
   color: var(--crt-text__color);
   font-weight: bold;
-  padding: 0.5rem;
+
   position: relative;
   overflow: hidden;
-  margin: 1rem auto;
+
   z-index: 0;
 }
 

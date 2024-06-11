@@ -1,81 +1,78 @@
 .footer-bg {
-  background-image: linear-gradient(120deg, #1c1c1c, #3d3b3b, #1c1c1c);
+  background-color: #1c1c1c;
+  background: linear-gradient(180deg,
+      #000000 0%,
+      #221d1d 1.5%,
+      hsla(0, 0%, 11%, 0.9) 5.5%,
+      20%,
+      #1f1d1d 60%,
+      #272222 99%,
+      #000000 100%) 0% 0%;
 }
 
-/* .ig-btn-bg {
-  background: rgb(225, 48, 108);
-  background: -moz-radial-gradient(
-    circle,
-    rgba(225, 48, 108, 1) 0%,
-    rgba(193, 53, 132, 1) 87%,
-    rgba(193, 53, 132, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    rgba(225, 48, 108, 1) 0%,
-    rgba(193, 53, 132, 1) 87%,
-    rgba(193, 53, 132, 1) 100%
-  );
-  background: radial-gradient(
-    circle,
-    rgba(225, 48, 108, 1) 0%,
-    rgba(193, 53, 132, 1) 87%,
-    rgba(193, 53, 132, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1306c",endColorstr="#c13584",GradientType=1);
-} */
-
 .ig-btn-bg {
-  background-color: hsla(340, 75%, 54%, 0.5);
+  background-color: hsla(340, 75%, 54%, 0.9);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
-    /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
-    /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
-    /* bottom SD */ inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
-    /* top HL */ hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
-    /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
+    /* border */
+    inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
+    /* soft SD*/
+    inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
+    /* bottom SD */
+    inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
+    /* top HL */
+    hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
+    /* outer SD */
+    hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
 
   transition: color 0.2s;
 }
 
 .ig-btn-bg:hover {
-  background-color: hsl(340, 75%, 54%);
-  scale: 1.1;
+  background-color: hsl(340, 97%, 47%);
 }
 
 .face-btn-bg {
   color: hsl(221, 44%, 41%);
 
-  background-color: hsla(221, 44%, 41%, 0.5);
+  background-color: hsla(221, 64%, 46%, 0.9);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
-    /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
-    /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
-    /* bottom SD */ inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
-    /* top HL */ hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
-    /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
+    /* border */
+    inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
+    /* soft SD*/
+    inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
+    /* bottom SD */
+    inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
+    /* top HL */
+    hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
+    /* outer SD */
+    hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
 
   transition: color 0.2s;
 }
 
 .face-btn-bg:hover {
-  background-color: hsl(221, 60%, 41%);
-  scale: 1.1;
+  background-color: hsl(221, 99%, 41%);
 }
 
 .whatsapp-btn-bg {
   color: hsl(120, 100%, 37%);
 
-  background-color: hsla(120, 100%, 37%, 0.5);
+  background-color: hsla(120, 100%, 37%, 0.9);
   box-shadow: inset hsla(0, 0%, 1%, 1) 0 0px 0px 2px,
-    /* border */ inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
-    /* soft SD*/ inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
-    /* bottom SD */ inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
-    /* top HL */ hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
-    /* outer SD */ hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
+    /* border */
+    inset hsla(0, 0%, 60%, 1) 0 0px 1px 2px,
+    /* soft SD*/
+    inset hsla(0, 0%, 0%, 0.25) 0 0px 0px 6px,
+    /* bottom SD */
+    inset hsla(0, 0%, 56%, 0.2) 0 0px 2px 7px,
+    /* top HL */
+    hsla(0, 0%, 0%, 0.15) 0 -1px 6px 4px,
+    /* outer SD */
+    hsla(0, 0%, 45%, 0.1) 0 0px 2px 2px;
 
   transition: color 0.2s;
 }
 
 .whatsapp-btn-bg:hover {
-  background-color: hsl(120, 100%, 37%);
-  scale: 1.1;
+  background-color: hsl(120, 87%, 48%);
 }

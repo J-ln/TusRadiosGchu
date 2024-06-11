@@ -32,7 +32,7 @@ const Slider = () => {
   };
 
   return (
-    <div className=" w-screen h-screen my-5 sm:my-10 md:h-[85vh]  relative flex flex-col lg:flex-row items-center    mt-10      ">
+    <div className=" w-full h-screen my-5 sm:my-10 md:h-[85vh]  relative flex flex-col lg:flex-row items-center    mt-10      ">
       <div className="relative  flex  items-center justify-center  w-full lg:w-1/2 h-full  ">
         {radios.map((radio, i) => (
           <Card

@@ -7,7 +7,6 @@ import { radios } from "../../lib/data";
 import Player from "@/components/Player/Player";
 import useRadioStore from "@/store";
 
-import MainBackground from "../MainBackground";
 import MainHeader from "./MainHeader";
 
 const Main = () => {
@@ -16,8 +15,7 @@ const Main = () => {
   const isPlaying = useRadioStore((state) => state.playState);
 
   return (
-    <section className="relative flex  items-center justify-center w-full px-20 h-screen bg-black crt-screen">
-      <MainBackground />
+    <section className="relative flex  items-center justify-center w-full px-20 h-screen  ">
       <MainHeader bold="Nuestras" thin="Estaciones" />
       <Vynil color={currentRadioColor} isPlaying={isPlaying} />
       <div className="absolute flex flex-col   md:px-0 gap-5  md:gap-0 md:flex-row flex-wrap top-[20%] md:top-0 left-0 h-full w-1/2 md:w-full md:h-full ">

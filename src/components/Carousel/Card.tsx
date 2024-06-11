@@ -18,8 +18,9 @@ const Card: React.FC<CardProps> = ({ radio, zIndex, index }) => {
       className=" absolute  right-1  w-11/12    h-[70%]  flex items-center justify-center   border rounded-2xl "
       style={{
         zIndex: zIndex,
-        backgroundColor: radio.color,
+        backgroundColor: zIndex === 0 ? radio.color : "transparent",
         mixBlendMode: zIndex === 0 ? "normal" : "luminosity",
+        contentVisibility: zIndex === 0 ? "auto" : "hidden",
       }}
       initial={{
         scale: 0.9,

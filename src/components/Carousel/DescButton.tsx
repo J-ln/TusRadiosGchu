@@ -9,7 +9,7 @@ const DescButton = ({ handleEvent, icon }: Props) => {
   return (
     <button
       onClick={handleEvent}
-      className="rounded-sm h-20 w-40 metal linear flex items-center justify-center border-[1px] border-black z-10 "
+      className="rounded-sm h-20 w-40 metal linear flex items-center justify-center   z-10 desc-btn-bg "
     >
       {" "}
       <Image src={icon} alt="Radio" width={64} height={64} />

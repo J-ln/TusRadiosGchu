@@ -10,15 +10,15 @@ const MainBackground = () => {
   const isPlaying = useRadioStore((state) => state.playState);
   const controls = useBackgroundAnimation(color);
   const backgroundGradient1 = useMotionTemplate`radial-gradient(
-        160% 160% at 50% 100%,
-        rgba(0, 0, 0, 0.3) 55%,
+        125% 125% at 50% 100%,
+        rgba(0, 0, 0, 0.3) 70%,
         ${color} 0%`;
 
   const backgroundGradient2 = useMotionTemplate`linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.3) 35%,
+            rgba(0, 0, 0, 0.3) 42.5%,
             ${color} 50%,
-            rgba(0, 0, 0, 0.3) 65%`;
+            rgba(0, 0, 0, 0.3) 57.5%`;
   const backgroundGradient3 = useMotionTemplate`radial-gradient(
               125% 125% at 50% 10%,
               rgba(0, 0, 0, 0.3) 30%,
@@ -26,7 +26,7 @@ const MainBackground = () => {
 
   useEffect(() => {}, [color, isPlaying]);
   return (
-    <div className="absolute top-0 left-0 -z-10  flex flex-col justify-between w-full h-full">
+    <div className="absolute top-0 left-0 z-[-5]  flex flex-col justify-between w-full h-full">
       <BlurElement
         key={1}
         isPlaying={isPlaying}
@@ -43,7 +43,19 @@ const MainBackground = () => {
         key={3}
         isPlaying={isPlaying}
         controls={controls}
+        gradient={backgroundGradient2}
+      />
+      <BlurElement
+        key={4}
+        isPlaying={isPlaying}
+        controls={controls}
         gradient={backgroundGradient3}
+      />
+      <BlurElement
+        key={5}
+        isPlaying={isPlaying}
+        controls={controls}
+        gradient={backgroundGradient2}
       />
     </div>
   );

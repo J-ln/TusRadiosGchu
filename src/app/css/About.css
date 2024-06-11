@@ -6,8 +6,7 @@
 }
 
 .vintage-bg {
-  background-image: linear-gradient(
-      #efe1d6,
+  background-image: linear-gradient(#efe1d6,
       #fef4e8 7.1%,
       #f7e9dc 7.25%,
       #f7ece8 7.35%,
@@ -22,36 +21,72 @@
       #cbbeb6 96%,
       #c5bcb3 96.15%,
       #797069 99%,
-      #544f4c
-    ),
+      #544f4c),
     linear-gradient(170deg, #cdc4bd, #c6bdb6);
 }
 
+.desc-container-bg {
+  background-color: #1c1c1c;
+  background: linear-gradient(180deg,
+      #151515 0%,
+      #221d1d 4.8%,
+      #131313 8%,
+      #151515 70%,
+      #181818 96%,
+      #232323 98%,
+      #202020 98.89%,
+      #1f1d1d 99.5%,
+
+      #000000 100%);
+}
+
+.radio-name-bg {
+  background-color: #000000;
+}
+
+/* do more darker the gradient for the desc-bg */
+
 .desc-bg {
-  background-image: linear-gradient(
-    180deg,
-    #272028,
-    #231d1f,
-    #201921,
-    #231e1b,
-    #231c24
-  );
+  background-color: #000000;
+  background: linear-gradient(180deg,
+      #151515 0%,
+
+      #111111 1.5%,
+      #000000 3.5%,
+
+      #000000 96%,
+      #232323 98%,
+      #202020 98.89%,
+      #1f1d1d 99.5%);
 }
 
 .desc-btn-bg {
   background-image: radial-gradient(#77726e 30%, #9a968d 50%, transparent 65%),
-    linear-gradient(
-      #a29899,
+    linear-gradient(#a29899,
       #c1b7b5,
       #c5bbb9,
       #c8bebc 10%,
       #aaa09e 29%,
-      /* End highlight */ #a19d92 32%,
-      /* start key */ #a19c98,
+      /* End highlight */
+      #a19d92 32%,
+      /* start key */
+      #a19c98,
       #9d9990 77%,
-      /* end key */ #65605c 95%,
-      /* start shadow */ #393335
-    );
+      /* end key */
+      #65605c 95%,
+      /* start shadow */
+      #393335);
+  box-shadow: 3px 10px 12px -3px rgba(0, 0, 0, 0.45),
+    2px 20px 14px -2px rgba(0, 0, 0, 0.2), 0 0 1px 0.25px #383129,
+    0.5px 0 1px -0.25px #453d3a inset, 0 -1.25px 1.5px -0.75px #22171b inset,
+    0 1px 1.25px -0.75px #aea4a3 inset;
+
+}
+
+.desc-btn-bg:active {
+  /* skew the button */
+  scale: 0.98;
+  border-top: 6px solid transparent;
   box-shadow: 3px 10px 12px -3px rgba(0, 0, 0, 0.45),
     2px 20px 14px -2px rgba(0, 0, 0, 0.2), 0 0 1px 0.25px #383129,
     0.5px 0 1px -0.25px #453d3a inset, 0 -1.25px 1.5px -0.75px #22171b inset,
