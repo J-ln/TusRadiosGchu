@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
 import useRadioStore from "@/store/index";
 import useBackgroundAnimation from "@/app/hooks/useBackgroundAnimation";
+import Image from "next/image";
 
 interface VynilProps {
   color: string;
   isPlaying: boolean;
 }
 const Vynil = ({ color, isPlaying }: VynilProps) => {
-  const currentRadioColor = useRadioStore((state) => state.radio.color);
+  const currentImage = useRadioStore((state) => state.radio.image);
   const controls = useBackgroundAnimation(color);
 
   const rotation = useMotionValue(0);
@@ -40,9 +41,19 @@ const Vynil = ({ color, isPlaying }: VynilProps) => {
       <motion.div
         style={{ background: color }}
         transition={{ duration: 1, type: "tween", ease: "easeInOut" }}
-        className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  z-10 rounded-full h-[150px] w-[150px] backdrop-contrast-75 shadow-black "
-      ></motion.div>
-      <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-black z-20 rounded-full h-[20px] w-[20px]"></div>
+        className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 flex items-center justify-center  z-10 rounded-full h-[150px] w-[150px] backdrop-contrast-75 shadow-black "
+      >{
+          currentImage ? (
+            <Image
+              src={currentImage}
+              alt="vynil"
+              width={125}
+              height={125}
+              className="object-cover p-auto m-auto rounded-full  overflow-hidden"
+            ></Image>
+          ) : null
+        }</motion.div>
+      <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-black z-20 rounded-full h-[20px] w-[20px] border-white border-[1px]"></div>
     </motion.div>
   );
 };
