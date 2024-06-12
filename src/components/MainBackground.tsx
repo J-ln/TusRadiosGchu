@@ -11,17 +11,17 @@ const MainBackground = () => {
   const controls = useBackgroundAnimation(color);
   const backgroundGradient1 = useMotionTemplate`radial-gradient(
         125% 125% at 50% 100%,
-        rgba(0, 0, 0, 0.3) 70%,
+        rgba(46, 46, 46, 0.4) 70%,
         ${color} 0%`;
 
   const backgroundGradient2 = useMotionTemplate`linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.3) 40%,
+            rgba(46, 46, 46, 0.4) 40%,
             ${color} 50%,
-            rgba(0, 0, 0, 0.3) 60%`;
+            rgba(46, 46, 46, 0.4) 60%`;
   const backgroundGradient3 = useMotionTemplate`radial-gradient(
               125% 125% at 50% 10%,
-              rgba(0, 0, 0, 0.3) 30%,
+              rgba(46, 46, 46, 0.4) 30%,
               ${color} 100%`;
 
   useEffect(() => { }, [color, isPlaying]);
