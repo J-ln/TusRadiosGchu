@@ -1,9 +1,9 @@
 :root {
   --crt-light__color-first: #002000;
-  --crt-light__color-second: #000a00;
+  --crt-light__color-second: #012e01;
   --crt-linear__color: #00200033;
   --crt-linear__height: 5px;
-  --crt-scan__color: hsla(0, 0%, 15%, 0.4);
+  --crt-scan__color: hsla(0, 0%, 15%, 0.6);
   --crt-text__color: white;
 }
 
@@ -11,17 +11,13 @@
 
 /* CRT Screen */
 .crt-screen {
-  background: repeating-linear-gradient(
-      to bottom,
+  background: repeating-linear-gradient(to bottom,
       transparent,
       transparent var(--crt-linear__height),
       var(--crt-linear__color) var(--crt-linear__height),
-      var(--crt-linear__color) calc(var(--crt-linear__height) * 2)
-    ),
-    radial-gradient(
-      var(--crt-light__color-first),
-      var(--crt-light__color-second)
-    );
+      var(--crt-linear__color) calc(var(--crt-linear__height) * 2)),
+    radial-gradient(var(--crt-light__color-first),
+      var(--crt-light__color-second));
   color: var(--crt-text__color);
   font-weight: bold;
 
