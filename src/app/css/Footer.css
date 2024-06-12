@@ -1,13 +1,14 @@
 .footer-bg {
-  background-color: #1c1c1c;
-  background: linear-gradient(180deg,
-      #000000 0%,
-      #221d1d 1.5%,
-      hsla(0, 0%, 11%, 0.9) 5.5%,
-      20%,
-      #1f1d1d 60%,
-      #272222 99%,
-      #000000 100%) 0% 0%;
+  background-color: #383838;
+  background: url("../../images/footer-pattern-2.svg") center center no-repeat;
+  background-size: cover;
+  /* o cualquier tamaño que desees */
+  height: 100%;
+  /* Ajusta según sea necesario */
+  position: relative;
+  z-index: 0;
+
+
 }
 
 .ig-btn-bg {

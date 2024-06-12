@@ -8,7 +8,7 @@ import MainBackground from "@/components/MainBackground";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col gap-0 pb-20 w-full min-h-screen max-h-fit crt-screen  overflow-x-hidden  scroll-smooth ">
+    <main className="relative flex flex-col gap-10 pt-5 sm:pt-0 pb-20 w-full min-h-screen max-h-fit crt-screen  overflow-x-hidden  scroll-smooth ">
       <MainBackground />
       <NavBar />
       <Main />

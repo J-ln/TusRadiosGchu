@@ -22,14 +22,14 @@
 }
 
 .bg-navbar {
-  background-color: #1c1c1c;
-  background: linear-gradient(180deg,
-      #000000 0%,
-      #221d1d 5.5%,
-      #131313 10.07%,
-      50%,
-      #202020 80.89%,
-      #1f1d1d 97.19%,
-      #000000 98.25%,
-      #000000 100%) 0% 0%;
+  background-color: #383838;
+  background: url("../../images/navbar-bg.svg") center center no-repeat;
+  background-size: cover;
+
+  height: 100%;
+
+  position: relative;
+  z-index: 0;
+  box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.8);
+
 }
