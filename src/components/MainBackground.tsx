@@ -16,15 +16,15 @@ const MainBackground = () => {
 
   const backgroundGradient2 = useMotionTemplate`linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.3) 42.5%,
+            rgba(0, 0, 0, 0.3) 40%,
             ${color} 50%,
-            rgba(0, 0, 0, 0.3) 57.5%`;
+            rgba(0, 0, 0, 0.3) 60%`;
   const backgroundGradient3 = useMotionTemplate`radial-gradient(
               125% 125% at 50% 10%,
               rgba(0, 0, 0, 0.3) 30%,
               ${color} 100%`;
 
-  useEffect(() => {}, [color, isPlaying]);
+  useEffect(() => { }, [color, isPlaying]);
   return (
     <div className="absolute top-0 left-0 z-[-5]  flex flex-col justify-between w-full h-full">
       <BlurElement
