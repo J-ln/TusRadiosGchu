@@ -9,7 +9,7 @@ interface Props {
 }
 const TinyText = ({ color, url, linkText, normalText }: Props) => {
   return (
-    <h5 className=" w-fit text-center p-0 sm:text-left text-[#999] font-normal text-sm text-shadow ">
+    <h5 className=" w-fit text-center p-0 sm:text-left text-[#D9D2BA] font-normal text-sm text-shadow ">
       {normalText}
       <Link href={url} style={{ color: color }} className="font-bold ">
         {linkText}

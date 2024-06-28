@@ -11,18 +11,23 @@ const MainBackground = () => {
   const controls = useBackgroundAnimation(color);
   const backgroundGradient1 = useMotionTemplate`radial-gradient(
         125% 125% at 50% 100%,
-        rgba(46, 46, 46, 0.4) 70%,
+        transparent 70%,
         ${color} 0%`;
 
   const backgroundGradient2 = useMotionTemplate`linear-gradient(
             180deg,
-            rgba(46, 46, 46, 0.4) 40%,
+            transparent 25%,
             ${color} 50%,
-            rgba(46, 46, 46, 0.4) 60%`;
+            transparent 62.5%`;
   const backgroundGradient3 = useMotionTemplate`radial-gradient(
               125% 125% at 50% 10%,
-              rgba(46, 46, 46, 0.4) 30%,
+              transparent 30%,
               ${color} 100%`;
+  const backgroundGradient4 = useMotionTemplate`linear-gradient(
+                180deg,
+                transparent 42.5%,
+                ${color} 50%,
+                transparent 57.5%`;
 
   useEffect(() => { }, [color, isPlaying]);
   return (
@@ -43,7 +48,7 @@ const MainBackground = () => {
         key={3}
         isPlaying={isPlaying}
         controls={controls}
-        gradient={backgroundGradient2}
+        gradient={backgroundGradient4}
       />
       <BlurElement
         key={4}

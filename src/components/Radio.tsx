@@ -12,7 +12,7 @@ const Radio = (radio: Radio) => {
       <motion.button
         className=" rounded-s-none rounded-full md:rounded-full h-28 w-28 sm:h-36  sm:w-36  text-white border-4 "
         style={{ backgroundColor: radio.color, borderColor: radio.color }}
-        onClick={() => setRadio(radio)}
+        onClick={() => setRadio(radio.id)}
         whileHover={{ backgroundColor: radio.color, scale: 1.2 }}
         transition={{ duration: 0.3 }}
       >

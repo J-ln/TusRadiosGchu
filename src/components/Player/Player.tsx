@@ -2,8 +2,6 @@
 import React, {
   createRef,
   RefObject,
-  useCallback,
-  useEffect,
   useState,
 } from "react";
 import useRadioStore from "@/store/index";
@@ -27,10 +25,9 @@ const Player = () => {
   const playState = useRadioStore((state) => state.playState);
   const { pauseAudio, playAudio, setPlayState, setSource } = useRadioStore();
   const audioPLayer = createRef<HTMLAudioElement>();
-  const [volume, setVolume] = useState(100);
 
   function handleVolumeChange(event: any) {
-    setVolume(event.target.value);
+
     handleVolume(audioPLayer, event.target.value);
   }
 
@@ -43,27 +40,28 @@ const Player = () => {
     }
   }
 
+  function handlePlaying() {
+    setPlayState(true);
+  }
+
+  function handleLoad(source: RefObject<HTMLAudioElement>) {
+    {
+      source.current?.play().then(() => {
+        setPlayState(true);
+      })
+    }
+
+  }
 
 
-  useEffect(() => {
 
-    audioPLayer.current?.addEventListener("loadedmetadata", async () => {
 
-      await audioPLayer.current?.play();
-
-    })
-    audioPLayer.current?.addEventListener("playing", () => {
-
-      setPlayState(true);
-    })
-
-  }, [playState, audioPLayer, setPlayState]);
 
   return (
     <div
       className={clsx(
         "fixed z-[1000] bottom-0 left-0 w-full h-20 player-bg overflow-hidden",
-        currentRadio.id !== 0 ? "visible" : "hidden"
+        currentRadio.id !== "" ? "visible" : "hidden"
       )}
     >
       <div className="flex justify-around sm:justify-between items-center h-full w-full px-5 sm:px-20 ">
@@ -73,9 +71,9 @@ const Player = () => {
           playState={playState}
           handlePlay={handlePlay}
         />
-        <VolumeSlider audioRef={audioPLayer} setVolume={setVolume} />
+        <VolumeSlider audioRef={audioPLayer} />
       </div>
-      <audio ref={audioPLayer} src={currentRadio.url}></audio>
+      <audio ref={audioPLayer} onLoadedMetadata={() => handleLoad(audioPLayer)} onPlaying={handlePlaying} src={currentRadio.url}></audio>
     </div>
   );
 };

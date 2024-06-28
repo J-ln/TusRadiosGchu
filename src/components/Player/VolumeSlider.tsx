@@ -5,14 +5,14 @@ import VolumeIcon from "@/icons/i-volume.png";
 
 interface VolumeSliderProps {
   audioRef: React.RefObject<HTMLAudioElement>;
-  setVolume: (volume: number) => void;
+
 }
 
-const VolumeSlider = ({ audioRef, setVolume }: VolumeSliderProps) => {
+const VolumeSlider = ({ audioRef }: VolumeSliderProps) => {
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseInt(e.target.value, 10);
     audioRef.current!.volume = newVolume / 100; // El volumen del audio debe estar entre 0 y 1
-    setVolume(newVolume); // Actualiza el estado del volumen si es necesario
+
   };
   return (
     <div className="hidden sm:flex items-center px-1  gap-1justify-center metal linear shadow-black shadow-sm w-50 h-10 rounded-lg ">

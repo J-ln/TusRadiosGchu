@@ -1,9 +1,9 @@
 :root {
-  --crt-light__color-first: #002000;
-  --crt-light__color-second: #012e01;
-  --crt-linear__color: #00200033;
-  --crt-linear__height: 5px;
-  --crt-scan__color: hsla(0, 0%, 15%, 0.6);
+  --crt-light__color-first: #282828;
+  --crt-light__color-second: #1b271b;
+  --crt-linear__color: #00000033;
+  --crt-linear__height: 2px;
+  --crt-scan__color: #26262699;
   --crt-text__color: white;
 }
 
